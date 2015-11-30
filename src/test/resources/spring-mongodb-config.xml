@@ -9,7 +9,7 @@
                 http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
 
     <!-- Default bean name is 'mongo' -->
-    <mongo:mongo host="localhost" port="27017">
+    <mongo:mongo host="${host}" port="${port}">
         <!-- OPTIONAL: configure <mongo:options /> -->
     </mongo:mongo>
 
@@ -20,7 +20,7 @@
         <constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
         <!--
              remove the extra “_class” column for every object saved by
-             override the MappingMongoConverter, and passing a new DefaultMongoTypeMapper(null)
+             overriding the MappingMongoConverter, and passing a new DefaultMongoTypeMapper(null)
          -->
         <constructor-arg name="mongoConverter" ref="mappingMongoConverter" />
     </bean>

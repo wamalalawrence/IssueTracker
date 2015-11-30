@@ -1,21 +1,19 @@
 package com.devs.issuetracker.rest;
 
-import java.util.List;
 
 import com.devs.issuetracker.model.Developer;
 import com.devs.issuetracker.service.GenericService;
+
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by wamalalawrence on 15/11/22.
+ * Created by wamalalawrence
  */
 
 @Controller

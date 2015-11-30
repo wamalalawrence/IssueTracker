@@ -2,7 +2,6 @@ package com.devs.issuetracker.dao.impl;
 
 import com.devs.issuetracker.dao.AbstractDao;
 import com.devs.issuetracker.dao.GenericDao;
-import com.devs.issuetracker.model.Bug;
 import com.devs.issuetracker.model.Story;
 
 import java.util.List;
@@ -11,7 +10,7 @@ import org.bson.types.ObjectId;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by wamalalawrence on 15/11/21.
+ * Created by wamalalawrence
  */
 
 @Repository

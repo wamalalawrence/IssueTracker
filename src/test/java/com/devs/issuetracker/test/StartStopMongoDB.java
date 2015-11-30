@@ -6,7 +6,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 
-import com.devs.issuetracker.util.PropertyValueLoader;
+import com.devs.issuetracker.test.util.PropertyValueLoader;
 /**
  * Created by wamalalawrence
  * Used to start and stop the local MongoDB instance before the test class is executed.
