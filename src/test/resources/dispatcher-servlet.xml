@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+    <import resource="spring-mongodb-config.xml"/>
+    <context:component-scan base-package="com.devs.issuetracker.rest" />
+    <tx:annotation-driven />
+    <mvc:annotation-driven />
+
+    <!-- bug service bean -->
+    <bean id="bugService" class="com.devs.issuetracker.service.impl.BugServiceImpl">
+        <property name="dao" ref="bugDao"/>
+    </bean>
+    <bean id="bugDao" class="com.devs.issuetracker.dao.impl.BugDaoImpl">
+        <property name="mongoTemplate" ref="mongoTemplate"/>
+    </bean>
+
+    <!-- developer service bean -->
+    <bean id="developerService" class="com.devs.issuetracker.service.impl.DeveloperServiceImpl">
+        <property name="dao" ref="developerDao"/>
+    </bean>
+    <bean id="developerDao" class="com.devs.issuetracker.dao.impl.DeveloperDaoImpl">
+        <property name="mongoTemplate" ref="mongoTemplate"/>
+    </bean>
+
+    <!-- story service bean -->
+    <bean id="storyService" class="com.devs.issuetracker.service.impl.StoryServiceImpl">
+        <property name="dao" ref="storyDao"/>
+    </bean>
+    <bean id="storyDao" class="com.devs.issuetracker.dao.impl.StoryDaoImpl">
+        <property name="mongoTemplate" ref="mongoTemplate"/>
+    </bean>
+
+</beans>

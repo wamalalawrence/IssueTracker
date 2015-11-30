@@ -1,0 +1,48 @@
+README
+
+1# Developer: 
+Lawrence Wamala - Java Developer
+wamalalawrence@gmail.com
+
+included:
+All source files (.java, .xml, .properties)
+
+I'd like to first mention that the biggest problem I encountered during this project 
+was just time limitations, i did not really have enough time finish but at least i made 
+sure i have a full running rest application that can possibly elaborate my strengths 
+including the archtectural choices, technology stack used and generally 
+a solid scalable api.
+If i had more time, i would properly implement the business logic as well as other functionalities of the application.
+
+2# Technology stack used:
+Java, Spring, Spring-Data Hibernate, MongoDB
+
+
+3# Motivation for the technical choices:
+
+Java (rest services)   - Java is my core language of choice, rest services 
+have continued to be popular amongst api developers of which am no exception.
+
+Spring and Hibernate - these frameworks are proven to be relatively lightweight, fast and very reliable
+
+MongoDB  - Json Document based database, very scalable, fast, with a very interestingly dynamic schema.
+
+
+#4 Configuration and Installation Instructions:
+Build project using maven command (mvn clean install) to generate a war file 
+in the target folder. 
+During build, if you don't skip tests, the test class will be run.
+Be sure to have mongodb installed (on localhost port 27017) and included on the class path.
+Edit property values found in "config.properties" accordingly.
+Drop the generated war into the webapps folder of Tomcat (version 8). 
+
+#5 Operating Instructions:
+There is no front-end to this application yet, i have tested it using Chrome's Postman.
+URLs:
+To check if application is up and running use: http://localhost:8080/IssueTracker/
+
+Other api resources :
+PUT:    http://localhost:8080/IssueTracker/developer.json 
+POST:   http://localhost:8080/IssueTracker/developer.json
+GET:    http://localhost:8080/IssueTracker/developers.json
+GET:    http://localhost:8080/IssueTracker/developer.json
