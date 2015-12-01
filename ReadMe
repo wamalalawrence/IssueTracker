@@ -12,10 +12,12 @@ was just time limitations, i did not really have enough time finish but at least
 sure i have a full running rest application that can possibly elaborate my strengths 
 including the archtectural choices, technology stack used and generally 
 a solid scalable api.
-If i had more time, i would properly implement the business logic as well as other functionalities of the application.
+If i had more time, i would properly do the following:-
+- Secure the api with preferably stateless token based authentication
+- implement all business requirements as set out in the requirements documents.
 
 2# Technology stack used:
-Java, Spring, Spring-Data Hibernate, MongoDB
+Java, Spring, Spring-Data, Hibernate, MongoDB
 
 
 3# Motivation for the technical choices:
@@ -25,7 +27,8 @@ have continued to be popular amongst api developers of which am no exception.
 
 Spring and Hibernate - these frameworks are proven to be relatively lightweight, fast and very reliable
 
-MongoDB  - Json Document based database, very scalable, fast, with a very interestingly dynamic schema.
+MongoDB  - Json Document based database, very scalable, fast, with a very interestingly dynamic schema. 
+No need for transaction management as document storage operations are atomic in nature.
 
 
 #4 Configuration and Installation Instructions:
